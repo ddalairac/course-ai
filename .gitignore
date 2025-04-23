@@ -1,3 +1,13 @@
+
+# Explicitly ignore your virtual environment folder
+ai-env/
+
+# VSCode config (optional, if you use it)
+.vscode/
+
+# macOS-specific hidden file
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

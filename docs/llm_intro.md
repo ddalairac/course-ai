@@ -15,6 +15,29 @@ Models like GPT are text prediction engines. They analyze the input text and pre
 
 ## Key Concepts
 
+- [Temperature](#temperature)
+- [Tokens](#tokens)
+- [Vectors](#vectors)
+- [Embeddings](#embeddings)
+- [Attention](#attention)
+- [Multilayer Perceptron (MLP)](#multilayer-perceptron-mlp)
+- [Deep Learning](#deep-learning)
+- [Model Training](#model-training)
+- [Scaling and Dimensional Efficiency](#scaling-and-dimensional-efficiency)
+- [Parameters](#parameters)
+- [Cost (Loss Function)](#cost-loss-function)
+- [Dimension](#dimension)
+- [Multidimensional Spaces](#multidimensional-spaces)
+
+
+[Transformer](#transformer)
+- [Key Characteristics](#key-characteristics)
+- [How a Transformer Layer Works](#how-a-transformer-layer-works)
+- [GPT](#gpt)
+- [BERT](#bert)
+- [Comparison: BERT vs GPT](#comparison-bert-vs-gpt)
+
+
 ### Temperature
 This parameter controls how random the word selection is:
 - **Low temperature** (e.g., 0): always selects the most probable word.
@@ -65,9 +88,10 @@ These parameters determine how the model responds to any given input.
 The model also evaluates how good its prediction was using a **loss function**.
 Training aims to minimize this loss to improve future predictions.
 
+### Dimension
+Amount of numbers in a vector that represents a word or token in the model's embedding space.
 
-
-## Multidimensional Spaces
+### Multidimensional Spaces
 
 Although models operate in hundreds or thousands of dimensions, they're often visualized in 3D for simplicity:
 - **X and Y axes**: vector values
@@ -78,11 +102,11 @@ The goal of training is to find the lowest-cost path across this "surface."
 
 
 
-## Core Matrices: Query, Key, and Value
+### Core Matrices: Query, Key, and Value
 
 In each attention step, three matrices are calculated:
 
-- **Query**: represents what a word “wants to know.”
+- **Query**: represents what a word "wants to know."
 - **Key**: represents potentially relevant words.
 - **Value**: contains the information to be passed along if relevance is high.
 
@@ -104,10 +128,7 @@ The relevant words, such as the adjectives that modify the noun (query).
 ### Value
 Represents the direction or transformation between two meanings.
 
-
-
-
-## Similarity
+### Similarity
 
 To evaluate similarity between vectors, metrics like **Euclidean distance** (how far apart they are) or **cosine similarity** (how aligned their directions are) are used.
 Cosine similarity is particularly useful in embeddings because it focuses on vector orientation, not magnitude.
@@ -116,9 +137,7 @@ Cosine similarity is particularly useful in embeddings because it focuses on vec
 - **Euclidean Distance**: Measures the straight-line distance between them
 
 
-
-
-## Weight
+### Weight
 
 The dot product result becomes an **attention weight**, indicating how relevant one word is to another.
 
@@ -135,7 +154,7 @@ The softmax function normalizes these weights to values between 0 and 1, ensurin
 
 ## Transformer
 
-The **Transformer** is the core architecture behind models like GPT, BERT, and many other modern language models. It was introduced in the paper *“Attention is All You Need”* (Vaswani et al., 2017) and revolutionized natural language processing due to its efficiency and ability to capture complex word relationships without processing sequences in order.
+The **Transformer** is the core architecture behind models like GPT, BERT, and many other modern language models. It was introduced in the paper *"Attention is All You Need"* (Vaswani et al., 2017) and revolutionized natural language processing due to its efficiency and ability to capture complex word relationships without processing sequences in order.
 
 ### Key Characteristics
 
@@ -174,7 +193,6 @@ Before being used for specific tasks, GPT is trained on massive volumes of text 
 ### Transformer
 GPT is built on the Transformer architecture, relying heavily on attention to process and understand context efficiently.
 
----
 
 ## BERT
 
@@ -189,7 +207,6 @@ Unlike GPT, which generates text token by token in sequence, **BERT does not gen
 - Each token **attends to all others** using **bidirectional self-attention**.
 - This means BERT sees both **left and right context simultaneously**, which is crucial for full-sentence understanding.
 
----
 
 ## Comparison: BERT vs GPT
 

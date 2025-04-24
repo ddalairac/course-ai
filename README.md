@@ -22,3 +22,8 @@ To set up the development environment and launch Jupyter Notebook:
 chmod +x 0_set_environment.sh
 ./0_set_environment.sh
 ```
+
+## DOCs
+
+- [Python basics](./docs/python_basics.md)
+- [LLMs intro](./docs/llm_intro.md)

@@ -1,3 +1,5 @@
+[< Back](../README.md)
+
 # How Does a LLM (Large Language Model) Work?
 
 Models like GPT are text prediction engines. They analyze the input text and predict the most likely next word based on a probability distribution over the entire vocabulary. This process is repeated in a loop:

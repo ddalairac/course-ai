@@ -11,7 +11,22 @@ echo "🚀 Installing Jupyter Notebook..."
 pip install notebook ipykernel
 
 echo "📚 Installing AI packages..."
-pip install torch numpy matplotlib accelerate transformers sentencepiece datasets langchain torchrl llama-index bertviz wikipedia langchain_community
+pip install \
+    torch \          # PyTorch: Deep learning framework
+    numpy \          # NumPy: Numerical computing and arrays
+    matplotlib \     # Matplotlib: Data visualization
+    accelerate \     # Accelerate: Hugging Face models optimization
+    transformers \   # Transformers: Language models library
+    sentencepiece \  # SentencePiece: Text tokenization
+    datasets \       # Datasets: Dataset management
+    langchain \      # LangChain: Framework for LLM applications
+    torchrl \        # TorchRL: Reinforcement Learning with PyTorch
+    llama-index \    # LlamaIndex: Document indexing and search
+    bertviz \        # BertViz: Language model visualization
+    wikipedia \      # Wikipedia: Wikipedia API access
+    langchain_community \  # LangChain community extensions
+    langchain_nvidia_ai_endpoints==0.3.9 \  # NVIDIA models integration
+    python-dotenv==1.1.0  # Environment variables management
 
 # 🆕 Additional dependencies
 echo "➕ Installing extra useful packages..."

@@ -18,9 +18,13 @@ You can use this as a playground for learning Python and trying out open-source 
 
 To set up the development environment and launch Jupyter Notebook:
 
+
 ```bash
-chmod +x 0_set_environment.sh
-./0_set_environment.sh
+chmod +x set_environment.sh
+./set_environment.sh
+
+# chmod: change mode
+# +x: execution permit
 ```
 
 ## DOCs
